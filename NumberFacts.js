@@ -113,6 +113,8 @@ function createPolaroid(){
   //Polaroid Div
   const $polaroid = $('<div>');
   $polaroid.attr('class','polaroid');
+  $polaroid.attr('style',`transform:rotate(${Math.random()}turn)`);
+
 
   //img
   const $polaroidPicture = $("<img>");
