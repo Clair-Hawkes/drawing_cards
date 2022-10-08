@@ -26,8 +26,8 @@ async function drawCard(deckId) {
 
 /**GetDeckAndDrawTwoCards takes no parameters.
  * Console.logs()
- *
- */
+ * TODO: Confirm if each call is a new succsessive ID.
+*/
 async function getDeckAndDrawTwoCards() {
   const deckId = await getDeckId();
   const card1 = await drawCard(deckId);
@@ -41,8 +41,9 @@ async function getDeckAndDrawTwoCards() {
 */
 function createCard(img){
   const $holder = $("<div>");
-  const $imgTag = $("<img>");
+  $holder.attr('class','card');
 
+  const $imgTag = $("<img>");
   $imgTag.attr('src',img);
   $imgTag.attr('style',`transform:rotate(${Math.random()}turn)`);
   // transform: rotate(0);
