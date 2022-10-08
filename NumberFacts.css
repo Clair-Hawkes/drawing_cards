@@ -47,10 +47,12 @@ body {
   text-align: center;
 }
 .polaroid {
+    width: 50%;
   background: #fff;
   padding: 1rem;
   box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
 }
 .polaroid > img{
   max-width: 100%;
@@ -67,7 +69,7 @@ body {
   width: 50%;
   display: inline-block;
   margin-top: 2rem;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 .item .polaroid:before {
   content: '';
@@ -76,12 +78,12 @@ body {
   transition: all 0.35s;
 }
 
-.item:hover {
+/* .item:hover {
   filter: none;
   transform: scale(1, 1) rotate(0deg) !important;
   transition: all 0.35s;
-}
-.item:hover .polaroid:before {
+} */
+/* .item:hover .polaroid:before {
   content: '';
   position: absolute;
   z-index: -1;
@@ -92,5 +94,5 @@ body {
   right: 5%;
   box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
   transition: all 0.35s;
-}
+} */
 
