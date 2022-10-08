@@ -3,6 +3,11 @@
 const BASEURL = "http://deckofcardsapi.com/api/deck/";
 let deckId = '';
 
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) ) + min;
+}
+const randomSign = () => Math.random() >= 0.5 ? 1 : -1;
+
 /**GetDeckID takes no parameters
  * Calls deckofcardsAPI
  * Returns a deckId as string.
@@ -113,7 +118,7 @@ function createPolaroid(){
   //Polaroid Div
   const $polaroid = $('<div>');
   $polaroid.attr('class','polaroid');
-  $polaroid.attr('style',`transform:rotate(${Math.random()}turn)`);
+  $polaroid.attr('style',`transform:rotate(${randomSign()*(getRndInteger(0,7)*0.01)}turn)`);
 
 
   //img
@@ -122,7 +127,7 @@ function createPolaroid(){
   //Caption Div
   const $caption = $('<div>');
   $caption.attr('class','caption');
-  $caption.text(captionText);
+  // $caption.text(captionText);
 
   // ___________ 2. Append all Element in order
   $polaroid.append($polaroidPicture);
